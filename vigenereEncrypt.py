@@ -16,9 +16,9 @@ letterslist = {'a': 0,  'A': 1, 'b': 2,  'B': 3, 'c': 4,  'C': 5, 'd': 6,  'D': 
                '~': 117, '€': 118, '$': 119, '|': 120, '§': 121, '%': 122, '0': 123, '1': 124, '2': 125, '3': 126, '4': 127,
                '5': 128, '6': 129, '7': 130, '8': 131, '9': 132, '=': 133, '@': 134, '[': 135, ']': 136, '{': 137, '}': 138,
                '°': 139, 'æ': 140, 'Æ': 141, 'œ': 142, '¢': 143, '£': 144, '¥': 145, 'ƒ': 146, 'ñ': 147, 'Ñ': 148, '¿': 149,
-               '¬': 150, '½': 151, '¼': 152, '«': 153, '»': 154, '¦': 155, 'ß': 156, 'µ': 157, '±': 158, '•': 159, '·': 160,
+               '¬': 150, '½': 151, '¼': 152, '«': 153, '»': 154, '¦': 155, 'ß': 156, 'µ': 157, '±': 158, '¾': 159, '·': 160,
                '²': 161, '…': 162, '†': 163, '‡': 164, '^': 165, '‰': 166, 'Š': 167, '`': 168, '´': 169, '“': 170, '”': 171,
-               '–': 172, '_': 173, '™': 174, 'š': 175, '¨': 176, '©': 177, '®': 178, '³': 179, '¹': 180, '¾': 181}
+               '–': 172, '_': 173, '™': 174, 'š': 175, '¨': 176, '©': 177, '®': 178, ' ': 179, '³': 180, '¹': 181, '•': 182, '*/avoid\'breaking' : 183}
 # when adding a character -> update(+1) int (181) in encrypt and decrypt
 
 def wordToIntArray(word): # returns an array with for each letter the corresponding integer
@@ -36,8 +36,8 @@ def encrypt(): # returns an array with the integer value of each letter of the m
         if index == len(keyArray):
             index = 0
         intvalue = w + keyArray[index]
-        if intvalue > 181: # when number greater than list
-            intvalue -= 181
+        if intvalue > 184: # when number greater than list size
+            intvalue -= 183
         wordAndKeyArray.append(intvalue)
         index +=1
     return wordAndKeyArray
@@ -52,7 +52,7 @@ def decrypt(): # returns an array with the integer value of each letter of the m
             index = 0
         intvalue = w - keyArray[index]
         if intvalue < 0: # when number smaller than list
-            intvalue += 181
+            intvalue += 183
         wordArray.append(intvalue)
         index += 1
     return wordArray
