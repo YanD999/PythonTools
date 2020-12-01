@@ -2,27 +2,27 @@
 Some tools in python
 
 ## Tools
-# MouseRandomize
+### MouseRandomize
 - Moves your mouse randomly untill you stop the program
 - To stop the program: move the mouse in a corner of your screen
 
-# TemperatureConverter
+### TemperatureConverter
 - Converts the temperature from Celsius to Fahrenheit or Kelvin
 - Works both ways
 
-# VignereEncrypt
+### VignereEncrypt
 - Encryption using Vigenère
 - Encrypts and Decrypts
 
 ## Games
-# ArtificialDice
+### ArtificialDice
 - Simulates a dice thrown
 - No animation, only the result
 - You can ask to throw N dices
 
-# GuessNumber
+### GuessNumber
 - Guess it
 - You can choose how much guesses and how big the number to guess is
 
-# TicTacToe
+### TicTacToe
 - TicTacToe, two players
